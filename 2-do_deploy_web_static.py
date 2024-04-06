@@ -36,7 +36,7 @@ def do_deploy(archive_path):
         run('rm /tmp/{}'.format(archive))
         run('mv {}/web_static/* {}'.format(path, path))
         run('rm -rf {}/web_static'.format(path))
-        run('sudo rm -rf {}'.format(current))
+        run('rm -rf {}'.format(current))
         run('ln -s {} {}'.format(path, current))
         print('New version deployed!')
         return True
